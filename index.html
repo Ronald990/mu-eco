@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLIPPATH SEMANA 6</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+
+
+        
+        .contenedor {
+        width: 600px;
+        height: 800px;
+        position: relative;
+        border-radius: 10px;
+        background-image: url(img/arbol.jpg);
+        background-size: cover;
+        background-position: center;
+        }
+        .cabeza{
+            width: 200px;
+            height: 200px;
+            background-image:url(img/fin.jpg) ;
+            background-size: cover;
+            clip-path: circle(50%);
+            background-position: center;
+            top:20%;
+            position: absolute;
+
+            left: 30%;
+            z-index: 2;
+            
+        }
+        .gorro{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+            top: 1%;
+            position: absolute;
+            left: 30%;
+            z-index: 7;
+
+        }
+        .brazo{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            clip-path: polygon(85% 37%, 100% 49%, 86% 60%, 13% 61%, 0 49%, 12% 37%);
+            position: absolute;
+            z-index: 0;
+            left: 30%;
+            top: 45%;
+            animation: moverBrazo 1.5s ease-in-out infinite alternate;
+
+        }
+        @keyframes moverBrazo {
+        0% {
+            transform: translateY(0);
+            }
+            100% {
+            transform: translateY(-20px); /
+        }
+        }
+        .cuerpo{
+            width: 200px;
+            height: 200px;
+            background-image: url(img/ro.jpg);
+            position: absolute;
+            background-size: cover;
+            background-position: center;
+
+            top: 45%;
+            left: 30%;
+
+            clip-path: polygon(44% 0, 62% 0, 86% 100%, 14% 100%);
+        }
+        .pata1{
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            position: absolute;
+            top: 60%;
+            left: 15%;
+            clip-path: ellipse(44% 25% at 50% 50%);
+            animation: movpata1 1.5s ease-in-out infinite alternate;
+
+        }
+        @keyframes movpata1 {
+        0% {
+            transform: translateY(0);
+            }
+            100% {
+            transform: translateY(-20px); /
+        }
+        }
+        .pata2{
+            width: 200px;
+            height: 200px;
+            background-color: peru;
+            position: absolute;
+            top: 60%;
+            left: 48%;
+            clip-path: ellipse(44% 25% at 50% 50%);
+            animation: movpata2 3s ease-in-out infinite alternate;
+
+        }
+        @keyframes movpata2 {
+        0% {
+            transform: translateY(0);
+            }
+            100% {
+            transform: translateY(-20px); /
+        }
+        }
+        .cono{
+            width: 200px;
+            height: 200px;
+            background-color: peru;
+            position: absolute;
+            top: 43%;
+            left: 46%;
+            clip-path: polygon(49% 58%, 37% 33%, 61% 33%);
+
+
+        }
+        .helado{
+            width: 200px;
+            height: 200px;
+            background-color: coral;
+            position: absolute;
+            top: 37%;
+            left: 48%;
+            clip-path: circle(9.0% at 50% 50%);
+        }
+        
+        .helado{
+            width: 200px;
+            height: 200px;
+            background-color: coral;
+            position: absolute;
+            top: 37%;
+            left: 48%;
+            clip-path: circle(9.0% at 50% 50%);
+        }
+        .helado2{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            position: absolute;
+            top: 37%;
+            left: 43%;
+            clip-path: circle(9.0% at 50% 50%);
+        }
+        .helado3{
+            width: 200px;
+            height: 200px;
+            background-color: violet;
+            position: absolute;
+            top: 34%;
+            left: 46%;
+            clip-path: circle(9.0% at 50% 50%);
+        }
+        
+
+
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <div class="cabeza"></div>
+        <div class="brazo"></div>
+        <div class="cuerpo"></div>
+        <div class="patas"></div>
+        <div class="gorro"></div>
+        <div class="pata1"></div>
+        <div class="pata2"></div>
+        <div class="cono"></div>
+        <div class="helado"></div>
+        <div class="helado2"></div>
+        <div class="helado3"></div>
+    </div>
+    <div class="marco1"></div>
+</body>
+</html>
